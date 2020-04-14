@@ -7,9 +7,11 @@ static int test1_init(void)
 {
 	struct attribute attr;
 	static struct lock_class_key __key;
+	bool b;
+	u32 u;
 
 	attr.key = &__key;
-	pr_info("test1 enter\n");
+	pr_info("test1 enter, %d, %d\n", sizeof(b), sizeof(u));
 	return 0;
 }
 
